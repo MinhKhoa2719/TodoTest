@@ -1,6 +1,6 @@
 let ip = [
     {
-        api: 'localhost'
+        api: '51.79.207.237'
     }
 ]
 
