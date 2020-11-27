@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ui:
+    restart: always
+    image: docker.pkg.github.com/minhkhoa2719/todotest/todo_ui:latest
+    volumes: 
+      - /todo/ui/src:/app/ui/src
+    ports:
+      - '80:80'
+    depends_on:
+      - api
+  api:
+    restart: always
+    image: docker.pkg.github.com/minhkhoa2719/todotest/todo_api:latest
+    volumes: 
+      - /todo/api/code:/app/api/code
+    ports:
+      - '8080:8080'
