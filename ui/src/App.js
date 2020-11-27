@@ -23,7 +23,7 @@ export default class PersonList extends React.Component {
   render() {
     return (
       <ul>
-        khoa minh
+        khoa minh test test
         { this.state.test.map(test => <li>{test}</li>)}
       </ul>
     )
