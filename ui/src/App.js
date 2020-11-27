@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import ip from './config/config'
 
+import logo from './images/i.jpg'
+
 export default class PersonList extends React.Component {
   state = {
     test: []
@@ -23,6 +25,7 @@ export default class PersonList extends React.Component {
   render() {
     return (
       <ul>
+        <img src={logo} alt="Logo" />
         khoa minh test test test test test lan 5
         { this.state.test.map(test => <li>{test}</li>)}
       </ul>
