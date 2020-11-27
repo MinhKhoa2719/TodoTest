@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ui:
+    restart: always
+    build: ./ui
+    ports:
+      - '3000:3000'
+    volumes: 
+      - /todo/ui/src:/app/ui/src
+    depends_on:
+      - api
+  api:
+    restart: always
+    build: ./api
+    volumes: 
+      - /todo/api/code:/app/api/code
+    ports:
+      - '8080:8080'
